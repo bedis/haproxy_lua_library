@@ -23,7 +23,7 @@ Then, use the New() function to create a new instance:
     }
     local h, err = haproxy:New(myHAProxy)
     if err ~= nil then
-      send_message(err)
+      print(err)
       return
     end
 
