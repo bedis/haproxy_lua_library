@@ -45,7 +45,7 @@ If everything went well, you can enjoy the methods listed below.
 Create a module object from scratch or optionally based on object passed
 
 * **@param** o: Optional object settings
-* **@return**: Module object and or nil and error string
+* **@return**: Module object or nil and error message
 
 The following object members are accepted:
 * **addr**: Optional path to HAProxy runtime API IP address - defaults to 127.0.0.1
