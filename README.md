@@ -58,4 +58,31 @@ The following object members are accepted:
 run a custom command
 
 * **@param**  cmd: the command to run
-* **@return** : command output or nil and error message or nil
+* **@return** : command output or nil and an error message
+
+### info()
+
+return HAProxy process information (aka `show info`)
+
+* **@return**: a Lua table with haproxy process information indexed by information name or nil and an error message
+
+### certList()
+
+return a list of SSL/TLS certificate names currently configured in HAProxy
+
+* **@return**: a Lua table indexed by certificate names or nil and an error message
+
+### certInfo(certName)
+
+return information for a given certificate
+
+* **@param** certName: name of the certificate to get info from (usually issued from certList above)
+* **@return** certificate information as a Lua indexed table or nil and an error message
+
+### certUpdate (certName, pem)
+
+Update a SSL / TLS certificate
+
+* **@param** certName: name of the certificate to update (usually issued from certList above)
+* **@param** pem: pem file format (concatenation of public certificate, intermediaries if any and private key)
+* **@return** nil or an error message if update could not happen
