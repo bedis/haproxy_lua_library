@@ -1,6 +1,6 @@
 # haproxy_lua_library
 
-A module to access HAProxy runtime API (stats socket) from Lua to execute commands which have no bindings in Lua yet
+A module to access HAProxy runtime API (stats socket) from Lua to execute commands which have no bindings in Lua yet.
 This module is intended to be called from a Lua script running **inside** haproxy.
 
 ## Quick start
